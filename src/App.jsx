@@ -58,6 +58,8 @@ import logo from "./assets/logo.png";
 import ContactUs from './ContactUs';
 import LogoIcon from "./Logo";
 import FooterLogoIcon from "./FooterLogo";
+import DeltaOnePromise from './DeltaOnePromise';
+import Founders from './Founders';
 // --- Data ---
 
 const industries = [
@@ -2144,6 +2146,7 @@ const AboutPage = () => {
       </div>
 
       {/* 2. Mission & Values (Split Layout) */}
+      {/* <DeltaOnePromise /> */}
       <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 animate-fade-in">
@@ -2183,6 +2186,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+
 
       {/* 3. Core Differentiators (Cards) */}
       <div className="bg-gray-50 py-24">
@@ -2245,6 +2249,7 @@ const AboutPage = () => {
       </div>
 
       {/* 4. Leadership Profile (Refined) */}
+      {/* <Founders /> */}
       <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-base text-teal-600 font-bold tracking-wide uppercase">Leadership</h2>
