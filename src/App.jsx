@@ -193,9 +193,9 @@ const Navbar = ({ currentPage, navigateTo }) => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || currentPage !== 'home' ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 bg-teal-50 ${isScrolled || currentPage !== 'home' ? 'shadow-md py-1' : 'py-2'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[5rem]">
+        <div className="flex justify-between items-center h-[4rem]">
           <div
             className="flex-shrink-0 flex items-center cursor-pointer group"
             onClick={() => handleNavClick("home")}
@@ -203,61 +203,11 @@ const Navbar = ({ currentPage, navigateTo }) => {
             <div className="leading-none">
 
               {/* ===== MAIN BRAND ===== */}
-              <h1
-                className={`
-        text-2xl md:text-3xl font-extrabold tracking-[0.18em]
-        transition-all duration-300
-        ${isScrolled || currentPage !== "home"
-                    ? "text-teal-900"
-                    : "text-white"}
-        group-hover:tracking-[0.22em]
-      `}
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Delta<span className="mx-1 font-light">·</span>One <span
-                  className={`
-    text-[10px] 
-    tracking-[0.35em] transition-all duration-300
-    ${isScrolled || currentPage !== "home"
-                      ? "text-teal-600"
-                      : "text-teal-300"}
-  `}
-                >
-
-                  Advisory
-                </span>
-              </h1>
-
-              {/* ===== ADVISORY ===== */}
-              <div className="relative inline-block ">
-
-
-                {/* Elegant underline */}
-                <div
-                  className={`
-          absolute bottom-0 left-0 w-full h-[2px]
-          ${isScrolled || currentPage !== "home"
-                      ? "bg-teal-600/40"
-                      : "bg-teal-300/40"}
-          scale-x-0 group-hover:scale-x-100
-          transition-transform duration-300 origin-left
-        `}
-                />
-              </div>
-
-              {/* ===== TAGLINE ===== */}
-              <p
-                className={`
-        text-[0.65rem] md:text-xs font-light uppercase
-        tracking-[0.32em]  transition-all duration-300
-        ${isScrolled || currentPage !== "home"
-                    ? "text-teal-900"
-                    : "text-white"}
-      `}
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              >
-                Bespoke • Insights • Value
-              </p>
+              <img
+                src="/bg remove logo.png"
+                alt="Delta One Advisory"
+                className="h-19 md:h-28 w-auto object-contain"
+              />
             </div>
           </div>
 
@@ -270,9 +220,7 @@ const Navbar = ({ currentPage, navigateTo }) => {
               <button
                 key={link.name}
                 onClick={() => handleNavClick(link.id)}
-                className={`text-sm font-medium transition-colors hover:text-teal-500 ${(isScrolled || currentPage !== 'home')
-                  ? (currentPage === link.id ? 'text-teal-600 font-bold' : 'text-gray-700')
-                  : (currentPage === link.id ? 'text-white font-bold underline decoration-teal-400 decoration-2 underline-offset-4' : 'text-white/90')
+                className={`text-[15px] font-medium transition-colors hover:text-teal-500 ${currentPage === link.id ? 'text-teal-600 font-bold' : 'text-gray-700'
                   }`}
               >
                 {link.name}
@@ -284,7 +232,7 @@ const Navbar = ({ currentPage, navigateTo }) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md ${isScrolled || currentPage !== 'home' ? 'text-gray-700' : 'text-white'}`}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -314,7 +262,7 @@ const Navbar = ({ currentPage, navigateTo }) => {
 
 const Footer = ({ navigateTo }) => {
   return (
-    <footer className="bg-gray-900 text-white border-t border-gray-800">
+    <footer className="bg-gray-100 text-gray-900 border-t border-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
@@ -323,16 +271,21 @@ const Footer = ({ navigateTo }) => {
             {/* <span className="text-xl font-bold tracking-tight text-white block mb-4">
               DELTA ONE <span className="text-teal-500">ADVISORY</span>
             </span> */}
-            <FooterLogoIcon />
+            {/* <FooterLogoIcon /> */}
+            <img
+              src="/bg remove logo.png"
+              alt="Delta One Advisory"
+              className="h-30 w-auto object-contain -mt-6 -mb-6"
+            />
             {/* <img src={logo} alt="Delta One Advisory Logo" className="h-12 mb-4" /> */}
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Your trusted partner for bespoke advisory solutions, unlocking exceptional value and fostering positive impact through financial excellence.
+            <p className="text-gray-600 text-base leading-relaxed mb-6">
+              Your strategic partner for financial transformation and sustainable growth. We are the “Rate of Change”; turning complexity into clarity, challenges into opportunities and vision into measurable results.
             </p>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer">
+              <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-gray-600 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer">
                 <Linkedin size={16} />
               </div>
-              <div className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer">
+              <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-gray-600 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer">
                 <Twitter size={16} />
               </div>
             </div>
@@ -340,7 +293,7 @@ const Footer = ({ navigateTo }) => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-teal-500 uppercase tracking-wider mb-4">Quick Links</h3>
+            <h3 className="text-base font-semibold text-teal-600 uppercase tracking-wider mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
                 { name: 'Home', id: 'home' },
@@ -353,7 +306,7 @@ const Footer = ({ navigateTo }) => {
                 <li key={link.name}>
                   <button
                     onClick={() => navigateTo(link.id)}
-                    className="text-gray-400 hover:text-white text-sm transition-colors text-left"
+                    className="text-gray-600 hover:text-teal-600 text-base transition-colors text-left"
                   >
                     {link.name}
                   </button>
@@ -364,11 +317,11 @@ const Footer = ({ navigateTo }) => {
 
           {/* Core Services */}
           <div>
-            <h3 className="text-sm font-semibold text-teal-500 uppercase tracking-wider mb-4">Core Services</h3>
+            <h3 className="text-base font-semibold text-teal-600 uppercase tracking-wider mb-4">Core Services</h3>
             <ul className="space-y-2">
               {['CFO Services', 'Treasury Management', 'Forensic Services', 'Strategic Advisory', 'Business Finance'].map((item) => (
                 <li key={item}>
-                  <button onClick={() => navigateTo('services')} className="text-gray-400 hover:text-white text-sm transition-colors text-left">
+                  <button onClick={() => navigateTo('services')} className="text-gray-600 hover:text-teal-600 text-base transition-colors text-left">
                     {item}
                   </button>
                 </li>
@@ -378,18 +331,18 @@ const Footer = ({ navigateTo }) => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-sm font-semibold text-teal-500 uppercase tracking-wider mb-4">Contact Us</h3>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <h3 className="text-base font-semibold text-teal-600 uppercase tracking-wider mb-4">Contact Us</h3>
+            <ul className="space-y-3 text-base text-gray-600">
               <li className="flex items-start">
-                <MapPin size={16} className="text-teal-500 mr-2 mt-0.5 shrink-0" />
-                <span>Bangalore (HQ), Chennai, Kochi, Hyderabad</span>
+                <MapPin size={16} className="text-teal-600 mr-2 mt-0.5 shrink-0" />
+                <span>Bangalore (HQ), Chennai, Kochi</span>
               </li>
               <li className="flex items-center">
-                <Mail size={16} className="text-teal-500 mr-2 shrink-0" />
-                <a href="mailto:connect@deltaoneadvisory.com" className="hover:text-white transition-colors">connect@deltaoneadvisory.com</a>
+                <Mail size={16} className="text-teal-600 mr-2 shrink-0" />
+                <a href="mailto:connect@deltaoneadvisory.com" className="hover:text-teal-600 transition-colors">connect@deltaoneadvisory.com</a>
               </li>
               <li className="flex items-start">
-                <Phone size={16} className="text-teal-500 mr-2 mt-0.5 shrink-0" />
+                <Phone size={16} className="text-teal-600 mr-2 mt-0.5 shrink-0" />
                 <div className="flex flex-col space-y-1">
                   <span>+91 98451 56275</span>
                   <span>+91 98866 67940</span>
@@ -399,13 +352,13 @@ const Footer = ({ navigateTo }) => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-base text-gray-500">
           <div className="flex items-center">
             <Copyright size={14} className="mr-1" /> {new Date().getFullYear()} Delta One Advisory. All Rights Reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <span className="hover:text-gray-300 cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-gray-300 cursor-pointer">Terms of Service</span>
+            <span className="hover:text-gray-900 cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-gray-900 cursor-pointer">Terms of Service</span>
           </div>
         </div>
       </div>
@@ -488,7 +441,7 @@ const HomePage = ({ navigateTo, onServiceClick }) => {
           <div className="text-center mb-12">
             <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">What We Do</h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Featured Services
+              Solutions that transform
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
               Delivering the whole 9 yards of Finance with precision and expertise.
@@ -661,7 +614,7 @@ const HomePage = ({ navigateTo, onServiceClick }) => {
                 <span className="inline-block px-3 py-1 bg-teal-600 text-xs font-semibold rounded-full uppercase tracking-wide">Agri-Business</span>
               </div>
               <p className="text-teal-100 italic mb-6">
-                "Provided critical corporate advisory for our IPO Readiness Assessment. From selecting the lead manager to DRHP preparation and post-listing value creation, their guidance was indispensable."
+                "Providing critical corporate advisory for our IPO Readiness Assessment; continuing to guide us for the readiness journey from lead manager selection to compliance frameworks for a successful listing in the future."
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center font-bold text-teal-900">L</div>
@@ -678,7 +631,7 @@ const HomePage = ({ navigateTo, onServiceClick }) => {
                 <span className="inline-block px-3 py-1 bg-teal-600 text-xs font-semibold rounded-full uppercase tracking-wide">Healthcare</span>
               </div>
               <p className="text-teal-100 italic mb-6">
-                "Delivered strategic services including monthly MIS preparation, SOP reviews, and internal control testing. Their support in Cash Flow Management has been transformative for our operations."
+                "Delivering strategic services including monthly MIS preparation, SOP reviews and internal control testing. Their overall support to the business has been transformative for our operations."
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center font-bold text-teal-900">H</div>
@@ -695,7 +648,7 @@ const HomePage = ({ navigateTo, onServiceClick }) => {
                 <span className="inline-block px-3 py-1 bg-teal-600 text-xs font-semibold rounded-full uppercase tracking-wide">Investment Banking</span>
               </div>
               <p className="text-teal-100 italic mb-6">
-                "Their boutique investment banking expertise helped us with startup valuations, investor decks, and preparing Information Memorandums. A true partner for the startup community."
+                "Their boutique investment banking expertise helped us with startup valuations, investor decks, preparing Information Memorandums and Seed Funding. A true partner for the startup community."
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center font-bold text-teal-900">S</div>

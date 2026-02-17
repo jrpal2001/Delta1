@@ -12,7 +12,7 @@ function LogoIcon() {
                 <h1
                     className={`
         text-2xl md:text-3xl font-extrabold tracking-[0.18em]
-        transition-all duration-300 text-teal-600
+        transition-all duration-300 text-teal-900
                     `}
                 >
                     Delta<span className="font-light mx-1">·</span>One
@@ -26,7 +26,7 @@ function LogoIcon() {
                     className={`
           text-sm md:text-base uppercase font-medium
           tracking-[0.35em] transition-all duration-300
-        text-teal-50 mb-[1rem]
+        text-teal-600 mb-[1rem]
         `}
                 >
                     Advisory
