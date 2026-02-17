@@ -55,10 +55,13 @@ import {
   GitMerge
 } from 'lucide-react';
 import logo from "./assets/logo.png";
+import logo2 from "./assets/logo2.png";
+import logo3 from "./assets/logo3.png";
 import ContactUs from './ContactUs';
 import LogoIcon from "./Logo";
 import FooterLogoIcon from "./FooterLogo";
 import DeltaOnePromise from './DeltaOnePromise';
+import WePromise from './WePromise';
 import Founders from './Founders';
 // --- Data ---
 
@@ -152,15 +155,21 @@ const SplashScreen = ({ onFinish }) => {
   }, [onFinish]);
 
   return (
-    <div className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-teal-900 transition-opacity duration-1000 ease-in-out ${fading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+    <div className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0B1F1C] transition-opacity duration-1000 ease-in-out ${fading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       <div className={`text-center transition-all duration-1000 transform ${fading ? 'scale-110' : 'scale-100'}`}>
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4">
-          Delta One <span className="text-teal-400 text">Advisory</span>
-        </h1>
-        <div className="h-1 w-24 bg-teal-500 mx-auto mb-6 rounded-full"></div>
-        <p className="text-teal-100 text-lg md:text-xl font-light tracking-[0.2em] uppercase">
+        <img
+          src={logo3}
+          alt="Delta One Advisory"
+          className="h-32 md:h-50 mb-6 mx-auto animate-pulse"
+          style={{
+            filter: `
+            drop-shadow(0 0 6px rgba(0, 200, 170, 0.45))
+            drop-shadow(0 0 18px rgba(0, 200, 170, 0.25))`
+          }}
+        />
+        {/* <p className="text-teal-100 text-lg md:text-xl font-light tracking-[0.2em] uppercase">
           Bespoke. Insights. Value.
-        </p>
+        </p> */}
       </div>
     </div>
   );
@@ -434,6 +443,8 @@ const HomePage = ({ navigateTo, onServiceClick }) => {
           </div>
         </div>
       </div>
+
+
 
       {/* 2. Featured Services (White) - Updated from PDF Page 3 */}
       <section className="py-20 bg-white">
@@ -2130,7 +2141,7 @@ const AboutPage = () => {
           <div className="bg-gray-50 p-10 rounded-2xl border-l-8 border-teal-500 shadow-sm relative animate-fade-in animation-delay-200">
             <Quote className="absolute top-6 right-6 text-gray-200 h-16 w-16" />
             <p className="text-2xl font-serif italic text-gray-800 leading-relaxed relative z-10 mb-6">
-              "Our mission is to be the 'rate of change' for businesses, helping them navigate complexity with precision and foresight."
+              "Your trusted partner for bespoke financial solutions that drive measurable growth. With 25+ years of expertise, we turn complexity into clarity, challenges into opportunities, and potential into exceptional value."
             </p>
             <div className="flex items-center">
               <div className="h-1 w-12 bg-teal-500 rounded-full mr-4"></div>
@@ -2139,7 +2150,8 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-
+      {/* 1.5 We Promise Section */}
+      <WePromise />
 
       {/* 3. Core Differentiators (Cards) */}
       <div className="bg-gray-50 py-24">
@@ -2222,23 +2234,25 @@ const AboutPage = () => {
               <div className="space-y-6">
                 <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Briefcase size={14} className="mr-2" /> Experience</div>
-                  <p className="text-gray-700 font-medium">25+ Years of deep industry expertise across various sectors.</p>
+                  <p className="text-gray-700 font-medium">A seasoned finance leader with 25+ years of cross-industry expertise spanning Big Four advisory, corporate treasury leadership, and C-suite roles.
+                    As Group CFO at Namdhari's Group, Binoo led finance transformation across four companies and managed a US acquisition. At United Spirits-Diageo, he revolutionized cash management, implementing India's first paperless banking solution in the alcobev sector and restructuring global debt.
+                    His foundation at Deloitte (including stints in San Jose and Singapore) developed expertise in risk-based audits, US GAAP/IFRS, and high-technology clients. He has also guided startups through CFO services, IPO readiness, and fundraising.</p>
                 </div>
                 <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Award size={14} className="mr-2" /> Recognition</div>
                   <p className="text-gray-700">Awarded Best Treasury Solution (2015).</p>
                 </div>
                 <div>
-                  <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-3"><Layers size={14} className="mr-2" /> Key Portfolio</div>
+                  {/* <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-3"><Layers size={14} className="mr-2" /> Key Portfolio</div>
                   <div className="flex flex-wrap gap-2">
                     {['Deloitte', "Namdhari's", 'United Spirits', 'SPS Hospitals', 'Diageo', 'Dairy Tales', 'Tvasta'].map(client => (
                       <span key={client} className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-semibold border border-gray-200">{client}</span>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-gray-100">
-                <p className="italic text-gray-500 text-center text-sm font-serif">"Driving strategic growth through financial excellence."</p>
+                <p className="italic text-gray-500 text-center text-sm font-serif">"Binoo combines strategic vision with hands-on execution—from M&A due diligence to building finance functions from scratch—uniquely positioning him to guide businesses through complexity toward sustainable growth."</p>
               </div>
             </div>
           </div>
@@ -2255,19 +2269,23 @@ const AboutPage = () => {
               <div className="space-y-6">
                 <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Briefcase size={14} className="mr-2" /> Experience</div>
-                  <p className="text-gray-700 font-medium">18+ Years of extensive financial expertise.</p>
+                  <p className="text-gray-700 font-medium">A Gold Medalist Chartered Accountant with 18+ years of experience spanning Big Four advisory, CFO roles, and corporate finance leadership across FMCG, retail, F&B, and e-commerce.
+                    As Deputy CFO at Namdhari's Group, Shruthi drove remarkable turnarounds—curtailing losses, improving margins, and transforming unprofitable units to profitability. At Maiyas Group, she raised monies from PE investors and achieved EBITDA profitability across operations.
+                    Her tenure at Wipro Enterprises included heading FP&A for Consumer Care & Lighting and serving as CFO for Yardley London's global operations. At Ernst & Young, she specialized in business structuring, regulatory consultancy, and tax advisory—notably supporting Flipkart's early fundraising and acquisitions.
+                    Academic Excellence: All India 10th Rank (CA Final - Best Lady Candidate), All India 2nd Rank (CA Inter) with two Gold Medals.
+                  </p>
                 </div>
-                <div>
+                {/* <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Award size={14} className="mr-2" /> Qualification</div>
                   <p className="text-gray-700">Gold Medalist & Rank Holder Chartered Accountant.</p>
-                </div>
+                </div> */}
                 <div>
-                  <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-3"><Layers size={14} className="mr-2" /> Key Portfolio</div>
+                  {/* <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-3"><Layers size={14} className="mr-2" /> Key Portfolio</div>
                   <div className="flex flex-wrap gap-2">
                     {['EY', 'PwC', 'Simpli', "Namdhari's", 'YLG', 'Wipro', 'Flipkart', 'FirstCry', 'Cloudnine', 'Myntra'].map(client => (
                       <span key={client} className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-semibold border border-gray-200">{client}</span>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-gray-100">
