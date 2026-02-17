@@ -2289,7 +2289,7 @@ const AboutPage = () => {
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-gray-100">
-                <p className="italic text-gray-500 text-center text-sm font-serif">"Combining academic excellence with practical expertise."</p>
+                <p className="italic text-gray-500 text-center text-sm font-serif">"Shruthi combines financial rigor with business partnership, specializing in turnaround strategies, controllership frameworks, and growth enablement—making her a trusted advisor for scaling organizations."</p>
               </div>
             </div>
           </div>
