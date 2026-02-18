@@ -2235,9 +2235,9 @@ const AboutPage = () => {
                 <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Briefcase size={14} className="mr-2" /> Experience</div>
                   <div className="text-gray-700 font-medium space-y-3 leading-relaxed">
-                    <p>A seasoned finance leader with 25+ years of cross-industry expertise spanning Big Four advisory, corporate treasury leadership, and C-suite roles.</p>
-                    <p>As Group CFO at Namdhari's Group, Binoo led finance transformation across four companies and managed a US acquisition. At United Spirits-Diageo, he revolutionized cash management, implementing India's first paperless banking solution in the alcobev sector and restructuring global debt.</p>
-                    <p>His foundation at Deloitte (including stints in San Jose and Singapore) developed expertise in risk-based audits, US GAAP/IFRS, and high-technology clients. He has also guided startups through CFO services, IPO readiness, and fundraising.</p>
+                    <p>A seasoned finance leader with <span className="font-bold text-gray-900">25+ years of cross-industry expertise</span> spanning Big Four advisory, corporate treasury leadership, and C-suite roles.</p>
+                    <p>As <span className="font-bold text-gray-900">Group CFO at Namdhari's Group</span>, Binoo led finance transformation across four companies and managed a US acquisition. At <span className="font-bold text-gray-900">United Spirits-Diageo</span>, he revolutionized cash management, implementing India's first paperless banking solution in the alcobev sector and restructuring global debt.</p>
+                    <p>His foundation at <span className="font-bold text-gray-900">Deloitte</span> (including stints in San Jose and Singapore) developed expertise in risk-based audits, US GAAP/IFRS, and high-technology clients. He has also guided startups through CFO services, IPO readiness, and fundraising.</p>
                   </div>
                 </div>
                 <div>
