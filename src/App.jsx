@@ -2272,10 +2272,10 @@ const AboutPage = () => {
                 <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Briefcase size={14} className="mr-2" /> Experience</div>
                   <div className="text-gray-700 font-medium space-y-3 leading-relaxed">
-                    <p>A Gold Medalist Chartered Accountant with 18+ years of experience spanning Big Four advisory, CFO roles, and corporate finance leadership across FMCG, retail, F&B, and e-commerce.</p>
-                    <p>As Deputy CFO at Namdhari's Group, Shruthi drove remarkable turnarounds—curtailing losses, improving margins, and transforming unprofitable units to profitability. At Maiyas Group, she raised monies from PE investors and achieved EBITDA profitability across operations.</p>
-                    <p>Her tenure at Wipro Enterprises included heading FP&A for Consumer Care & Lighting and serving as CFO for Yardley London's global operations. At Ernst & Young, she specialized in business structuring, regulatory consultancy, and tax advisory—notably supporting Flipkart's early fundraising and acquisitions.</p>
-                    <p>Academic Excellence: All India 10th Rank (CA Final - Best Lady Candidate), All India 2nd Rank (CA Inter) with two Gold Medals.</p>
+                    <p><span className="font-bold text-gray-900">A Gold Medalist Chartered Accountant</span> with <span className="font-bold text-gray-900">18+ years of experience</span> spanning Big Four advisory, CFO roles, and corporate finance leadership across FMCG, retail, F&B, and e-commerce.</p>
+                    <p>As <span className="font-bold text-gray-900">Deputy CFO at Namdhari's Group</span>, Shruthi drove remarkable turnarounds—curtailing losses, improving margins, and transforming unprofitable units to profitability. At <span className="font-bold text-gray-900">Maiyas Group</span>, she raised monies from PE investors and achieved EBITDA profitability across operations.</p>
+                    <p>Her tenure at <span className="font-bold text-gray-900">Wipro Enterprises</span> included heading FP&A for Consumer Care & Lighting and serving as CFO for Yardley London's global operations. At <span className="font-bold text-gray-900">Ernst & Young</span>, she specialized in business structuring, regulatory consultancy, and tax advisory—notably supporting Flipkart's early fundraising and acquisitions.</p>
+                    <p><span className="font-bold text-gray-900">Academic Excellence:</span> All India 10th Rank (CA Final - Best Lady Candidate), All India 2nd Rank (CA Inter) with two Gold Medals.</p>
                   </div>
                 </div>
                 {/* <div>
