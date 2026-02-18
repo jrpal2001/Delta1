@@ -450,7 +450,7 @@ const HomePage = ({ navigateTo, onServiceClick }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">What We Do</h2>
+            {/* <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">What We Do</h2> */}
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Solutions that transform
             </p>
@@ -2234,9 +2234,11 @@ const AboutPage = () => {
               <div className="space-y-6">
                 <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Briefcase size={14} className="mr-2" /> Experience</div>
-                  <p className="text-gray-700 font-medium">A seasoned finance leader with 25+ years of cross-industry expertise spanning Big Four advisory, corporate treasury leadership, and C-suite roles.
-                    As Group CFO at Namdhari's Group, Binoo led finance transformation across four companies and managed a US acquisition. At United Spirits-Diageo, he revolutionized cash management, implementing India's first paperless banking solution in the alcobev sector and restructuring global debt.
-                    His foundation at Deloitte (including stints in San Jose and Singapore) developed expertise in risk-based audits, US GAAP/IFRS, and high-technology clients. He has also guided startups through CFO services, IPO readiness, and fundraising.</p>
+                  <div className="text-gray-700 font-medium space-y-3 leading-relaxed">
+                    <p>A seasoned finance leader with 25+ years of cross-industry expertise spanning Big Four advisory, corporate treasury leadership, and C-suite roles.</p>
+                    <p>As Group CFO at Namdhari's Group, Binoo led finance transformation across four companies and managed a US acquisition. At United Spirits-Diageo, he revolutionized cash management, implementing India's first paperless banking solution in the alcobev sector and restructuring global debt.</p>
+                    <p>His foundation at Deloitte (including stints in San Jose and Singapore) developed expertise in risk-based audits, US GAAP/IFRS, and high-technology clients. He has also guided startups through CFO services, IPO readiness, and fundraising.</p>
+                  </div>
                 </div>
                 <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Award size={14} className="mr-2" /> Recognition</div>
@@ -2269,11 +2271,12 @@ const AboutPage = () => {
               <div className="space-y-6">
                 <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Briefcase size={14} className="mr-2" /> Experience</div>
-                  <p className="text-gray-700 font-medium">A Gold Medalist Chartered Accountant with 18+ years of experience spanning Big Four advisory, CFO roles, and corporate finance leadership across FMCG, retail, F&B, and e-commerce.
-                    As Deputy CFO at Namdhari's Group, Shruthi drove remarkable turnarounds—curtailing losses, improving margins, and transforming unprofitable units to profitability. At Maiyas Group, she raised monies from PE investors and achieved EBITDA profitability across operations.
-                    Her tenure at Wipro Enterprises included heading FP&A for Consumer Care & Lighting and serving as CFO for Yardley London's global operations. At Ernst & Young, she specialized in business structuring, regulatory consultancy, and tax advisory—notably supporting Flipkart's early fundraising and acquisitions.
-                    Academic Excellence: All India 10th Rank (CA Final - Best Lady Candidate), All India 2nd Rank (CA Inter) with two Gold Medals.
-                  </p>
+                  <div className="text-gray-700 font-medium space-y-3 leading-relaxed">
+                    <p>A Gold Medalist Chartered Accountant with 18+ years of experience spanning Big Four advisory, CFO roles, and corporate finance leadership across FMCG, retail, F&B, and e-commerce.</p>
+                    <p>As Deputy CFO at Namdhari's Group, Shruthi drove remarkable turnarounds—curtailing losses, improving margins, and transforming unprofitable units to profitability. At Maiyas Group, she raised monies from PE investors and achieved EBITDA profitability across operations.</p>
+                    <p>Her tenure at Wipro Enterprises included heading FP&A for Consumer Care & Lighting and serving as CFO for Yardley London's global operations. At Ernst & Young, she specialized in business structuring, regulatory consultancy, and tax advisory—notably supporting Flipkart's early fundraising and acquisitions.</p>
+                    <p>Academic Excellence: All India 10th Rank (CA Final - Best Lady Candidate), All India 2nd Rank (CA Inter) with two Gold Medals.</p>
+                  </div>
                 </div>
                 {/* <div>
                   <div className="flex items-center text-teal-700 font-bold text-xs uppercase tracking-wider mb-2"><Award size={14} className="mr-2" /> Qualification</div>
